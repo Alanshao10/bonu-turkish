@@ -58,6 +58,8 @@ h3{font-size:24px;line-height:1.25}
 .main{background:var(--rose);color:#fff;box-shadow:0 14px 34px -12px rgba(201,99,123,.8)}
 .main:hover{background:var(--rose-d)}
 .ghost{background:var(--card);color:var(--rose-d);border:1px solid var(--line)}
+.tgb{background:#229ed9;color:#fff;box-shadow:0 14px 34px -14px rgba(34,158,217,.8)}
+.tgb:hover{background:#1b88bd}
 .wa{background:#2f9e6a;color:#fff;box-shadow:0 14px 34px -14px rgba(47,158,106,.8)}
 
 /* шапка */
@@ -86,7 +88,7 @@ h3{font-size:24px;line-height:1.25}
 .say .w{font:700 26px var(--serif);color:var(--rose);transition:opacity .35s}
 .say .r{font-size:15px;color:var(--ink-2);transition:opacity .35s}
 .fade{opacity:0}
-.stars{right:-18px;top:40px;padding:12px 16px;font-weight:800;font-size:15px;line-height:1.4}
+.stars{right:-34px;top:0;padding:12px 16px;font-weight:800;font-size:15px;line-height:1.4}
 .stars b{color:var(--gold);letter-spacing:2px}
 .tulip{position:absolute;opacity:.5;pointer-events:none;z-index:1}
 .t1{left:2%;top:22%;width:84px;animation:sway 6s ease-in-out infinite}
@@ -280,6 +282,36 @@ h3{font-size:24px;line-height:1.25}
 .stage figcaption .tr{font-size:17px}
 .credits{font-size:13px;margin-top:6px;width:100%}
 
+/* Instagram */
+.insta{justify-self:center;width:min(420px,100%);background:var(--card);border:1px solid var(--line);border-radius:30px;padding:30px 26px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;box-shadow:0 30px 60px -36px rgba(166,77,99,.6);transition:transform .25s}
+.insta:hover{transform:translateY(-4px)}
+.ig-ring{width:128px;height:128px;border-radius:50%;padding:4px;background:conic-gradient(from 210deg,#f9ce34,#ee2a7b,#c9637b,#f9a8bd,#f9ce34);margin-bottom:6px}
+.ig-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:60% 30%;border:4px solid var(--card)}
+.ig-label{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--rose-d)}
+.ig-nick{font:700 28px var(--serif)}
+.ig-text{font-size:16px;color:var(--ink-2);line-height:1.5;max-width:320px}
+.ig-btn{margin-top:10px;background:linear-gradient(90deg,#f58529,#dd2a7b 55%,#8134af);color:#fff}
+.ig-btn svg{width:22px;height:22px}
+/* урок: две половины */
+.lesson{grid-template-columns:1fr;gap:28px}
+.plan{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.half-col{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:22px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.half-col.talk{background:linear-gradient(160deg,#f4b6c4,#e48da2 55%,var(--rose));border:0;color:#fff}
+.hc-h{font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--rose-d);display:flex;align-items:baseline;gap:10px}
+.hc-h b{font:700 28px var(--serif);text-transform:none;letter-spacing:0}
+.talk .hc-h{color:#fff}
+.pcard{background:var(--bg);border-radius:18px;padding:18px 20px;flex:1}
+.talk .pcard{background:rgba(255,255,255,.2)}
+.pcard h3{font-size:22px;margin:8px 0 6px}
+.talk .pcard h3{color:#fff}
+.pcard p{font-size:16px;color:var(--ink-2);line-height:1.5}
+.talk .pcard p{color:#fff}
+.pn{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--rose);color:#fff;font-weight:800;font-size:15px}
+.talk .pn{background:#fff;color:var(--rose-d)}
+.half{margin-top:0}
+.also{grid-template-columns:1fr 1fr}
+#perevodchik-s .tool{margin-top:0}
+
 /* нижняя панель на телефоне */
 .dock{display:none}
 
@@ -289,8 +321,8 @@ h3{font-size:24px;line-height:1.25}
   .hero{gap:40px;padding-bottom:72px}
   .goals,.phrases,.path{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
-  .say{left:0}.stars{right:0}
-  .about .photo{order:-1}
+  .say{left:-6px;bottom:18px}.stars{display:none}
+  .plan,.also{grid-template-columns:1fr}
   .gal{grid-template-columns:1fr}
   .pic.tall{grid-row:auto;min-height:420px}
   .cards{grid-template-columns:1fr 1fr}
@@ -321,7 +353,21 @@ h3{font-size:24px;line-height:1.25}
   .chips button{min-height:44px}
   .foot nav a{padding:10px 0}
   .t1{width:56px;top:auto;bottom:38%}
-  .dock{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(253,245,243,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  .dock{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(253,245,243,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(120%);transition:transform .3s}
+  .dock.show{transform:none}
+  #perevodchik-s{padding-block:36px}
+  .tool-l{padding:20px 18px 14px}
+  .tool-l .eyebrow{margin-bottom:4px}
+  .tool-l h3{font-size:25px;margin-bottom:4px}
+  .tool-l p{font-size:14px;margin-bottom:10px;line-height:1.45}
+  .tool textarea{font-size:18px;min-height:52px;padding:12px 14px}
+  .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;margin-top:10px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chips button{flex:none}
+  .tool-r{padding:18px;min-height:160px;gap:4px}
+  .out{font-size:27px}
+  .src{font-size:15px}
+  .tnote{font-size:13px}
   .dock .btn{padding:14px 10px;font-size:16px;border-radius:14px}
   .foot{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
 }
@@ -343,8 +389,8 @@ h3{font-size:24px;line-height:1.25}
   <div class="wrap">
     <header class="nav">
       <a class="logo" href="#top"><svg viewBox="0 0 60 120" aria-hidden="true"><use href="#tl"/></svg>Бону <small>турецкий онлайн</small></a>
-      <nav class="menu" aria-label="Разделы"><a href="#obo-mne">Обо мне</a><a href="#urok">Как проходит урок</a><a href="#otzyvy">Отзывы</a><a href="#cena">Цена</a><a href="#voprosy">Вопросы</a></nav>
-      <a class="btn ghost" href="https://t.me/+79337342962" target="_blank" rel="noopener">Написать</a>
+      <nav class="menu" aria-label="Разделы"><a href="#obo-mne">Обо мне</a><a href="#perevodchik">Переводчик</a><a href="#urok">Как проходит урок</a><a href="#otzyvy">Отзывы</a><a href="#cena">Цена</a><a href="#voprosy">Вопросы</a></nav>
+      <a class="btn ghost" href="https://t.me/banunachka" target="_blank" rel="noopener">Написать</a>
     </header>
     <div class="hero">
       <div>
@@ -380,16 +426,38 @@ h3{font-size:24px;line-height:1.25}
         <li><b>Лицей</b><span>турецкий лицей, жизнь и работа в Турции</span></li>
       </ul>
     </div>
-    <div class="photo">
-      <figure>
-        <img data-ph="p0" alt="Бону ведёт урок турецкого" width="700" height="467" style="object-position:55% 40%">
-        <figcaption>Мой турецкий блог в Instagram: <a class="tr" href="https://www.instagram.com/bonu_turkish" target="_blank" rel="noopener">@bonu_turkish</a></figcaption>
-      </figure>
+    <a class="insta" href="https://www.instagram.com/bonu_turkish" target="_blank" rel="noopener">
+      <span class="ig-ring"><img data-ph="p0" alt="Бону" width="120" height="120"></span>
+      <span class="ig-label">Мой турецкий блог в Instagram</span>
+      <b class="ig-nick">@bonu_turkish</b>
+      <span class="ig-text">Посмотрите, как я объясняю турецкий: слова, фразы, правила простыми словами.</span>
+      <span class="btn ig-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg>Открыть блог</span>
+    </a>
+  </div>
+</section>
+
+<section class="band" id="perevodchik-s">
+  <div class="wrap">
+    <div class="tool" id="perevodchik">
+      <div class="tool-l">
+        <span class="eyebrow">Мини-переводчик</span>
+        <h3>Как это будет <em>по-турецки?</em></h3>
+        <p>Напишите слово или фразу по-русски, и перевод появится сразу. Не вводите личные данные: необычные фразы переводит внешний сервис.</p>
+        <label class="sr" for="ruIn">Текст на русском</label>
+        <textarea id="ruIn" rows="2" maxlength="300" placeholder="Например: я хочу выучить турецкий"></textarea>
+        <div class="chips" id="chips"></div>
+      </div>
+      <div class="tool-r" aria-live="polite">
+        <span class="lbl">Türkçe</span>
+        <div class="out" id="trOut">Türkçe öğrenmek istiyorum</div>
+        <div class="src" id="trSrc">Я хочу выучить турецкий</div>
+        <p class="tnote" id="trNote">Готовая фраза</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="band" id="zachem">
+<section id="zachem">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Для чего учим</span>
@@ -407,39 +475,37 @@ h3{font-size:24px;line-height:1.25}
   </div>
 </section>
 
-<section id="urok">
+<section class="band" id="urok">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Как проходит урок</span>
       <h2>Один час, <em>половина — разговор</em></h2>
-      <p class="intro">Ученики часто отмечают именно это: правила и практика в каждом уроке. Нажмите на часть урока.</p>
+      <p class="intro">Ученики часто отмечают именно это: правила и практика в каждом уроке.</p>
     </div>
     <div class="lesson">
-      <div>
-        <div class="bar" role="group" aria-label="Части урока">
-          <button class="s1" type="button" data-i="0" aria-pressed="false">Повторяем</button>
-          <button class="s2" type="button" data-i="1" aria-pressed="false">Новое правило</button>
-          <button class="s3" type="button" data-i="2" aria-pressed="true">Говорим</button>
+      <div class="plan">
+        <div class="half-col">
+          <div class="hc-h"><b>½ урока</b>грамматика</div>
+          <div class="pcard"><span class="pn">1</span><h3>Повторяем</h3><p>Вспоминаем слова и правила прошлого урока. Так ничего не забывается.</p></div>
+          <div class="pcard"><span class="pn">2</span><h3>Новое правило</h3><p>Разбираем грамматику «по полочкам», на примерах из жизни. Если непонятно, объясню ещё раз.</p></div>
         </div>
-        <div class="scale" aria-hidden="true"><span>← половина урока: грамматика</span><span>половина: разговор →</span></div>
-        <div class="step" id="step" aria-live="polite">
-          <small>Вторая половина урока</small>
-          <h3>Говорим по-турецки</h3>
-          <p>Диалоги на новую тему, новые слова, чтение небольшого текста. Вы говорите сами с первого урока, а я подсказываю и мягко поправляю.</p>
+        <div class="half-col talk">
+          <div class="hc-h"><b>½ урока</b>разговор</div>
+          <div class="pcard"><span class="pn">3</span><h3>Говорим по-турецки</h3><p>Диалоги на новую тему, новые слова, чтение небольшого текста. Вы говорите сами с первого урока, а я подсказываю и мягко поправляю.</p></div>
         </div>
-        <p class="half"><b>Примерно так</b> строится каждый урок. Если хотите больше разговора или больше грамматики, скажите, и я поменяю план.</p>
       </div>
+      <p class="half"><b>Примерно так</b> строится каждый урок. Если хотите больше разговора или больше грамматики, скажите, и я поменяю план.</p>
       <ul class="also">
         <li><span>1</span><div><b>Онлайн, один на один</b><p>Только вы и преподаватель. Никто не торопит, можно спрашивать сколько угодно.</p></div></li>
         <li><span>2</span><div><b>Материалы от меня</b><p>Подбираю план и высылаю учебные материалы под ваш уровень.</p></div></li>
         <li><span>3</span><div><b>Удобное время</b><p>Расписание обсуждаем вместе. Если планы поменялись, урок можно перенести.</p></div></li>
-        <li><span>4</span><div><b>Практика с носителем</b><p>Иногда устраиваю разговорные встречи онлайн с носителем языка, чтобы закрепить речь.</p></div></li>
+        <li><span>4</span><div><b>Взрослым и детям</b><p>Занимаюсь и со взрослыми, и с детьми. Темп подбираю под каждого.</p></div></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="band" id="rezultat">
+<section id="rezultat">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Чего ждать</span>
@@ -454,7 +520,7 @@ h3{font-size:24px;line-height:1.25}
   </div>
 </section>
 
-<section id="otzyvy">
+<section class="band" id="otzyvy">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Отзывы</span>
@@ -486,7 +552,7 @@ h3{font-size:24px;line-height:1.25}
   </div>
 </section>
 
-<section class="band" id="cena">
+<section id="cena">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Цена</span>
@@ -504,7 +570,7 @@ h3{font-size:24px;line-height:1.25}
           <li>Удобное время, можно перенести урок</li>
         </ul>
         <div class="tags"><span>С нуля</span><span>Для путешествий</span><span>Для работы</span><span>К экзамену</span></div>
-        <a class="btn main" href="https://t.me/+79337342962" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#tg"/></svg>Записаться в Telegram</a>
+        <a class="btn tgb" href="https://t.me/banunachka" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#tg"/></svg>Записаться в Telegram</a>
       </div>
       <div class="price free" id="zapis">
         <h3>Пробный урок</h3>
@@ -514,45 +580,25 @@ h3{font-size:24px;line-height:1.25}
           <li>Обсуждаем цель и удобное расписание</li>
           <li>Вы понимаете, как проходят уроки, и решаете, продолжать ли</li>
         </ul>
-        <a class="btn" href="https://t.me/+79337342962" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#tg"/></svg>Хочу пробный урок</a>
+        <a class="btn" href="https://t.me/banunachka" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#tg"/></svg>Хочу пробный урок</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="poprobuyte">
+<section class="band" id="poprobuyte">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Попробуйте прямо сейчас</span>
       <h2>Фразы, которые <em>пригодятся сразу</em></h2>
-      <p class="intro">Нажмите на карточку: она перевернётся, покажет перевод и как это произносится, и прочитает фразу вслух.</p>
+      <p class="intro">Нажмите на карточку: она перевернётся и покажет перевод, произношение и пример.</p>
     </div>
     <div class="cards" id="cards"></div>
-    <p class="note" id="voiceNote">Вслух фразу читает голосовой помощник вашего браузера. На уроке вы услышите живое произношение.</p>
 
-    <div class="tool" id="perevodchik">
-      <div class="tool-l">
-        <span class="eyebrow">Мини-переводчик</span>
-        <h3>Как это будет <em>по-турецки?</em></h3>
-        <p>Напишите слово или фразу по-русски, и перевод появится сразу. Не вводите личные данные: необычные фразы переводит внешний сервис.</p>
-        <label class="sr" for="ruIn">Текст на русском</label>
-        <textarea id="ruIn" rows="2" maxlength="300" placeholder="Например: я хочу выучить турецкий"></textarea>
-        <div class="chips" id="chips"></div>
-      </div>
-      <div class="tool-r" aria-live="polite">
-        <span class="lbl">Türkçe</span>
-        <div class="out" id="trOut">Türkçe öğrenmek istiyorum</div>
-        <div class="src" id="trSrc">Я хочу выучить турецкий</div>
-        <div class="tool-a">
-          <button class="btn main" type="button" id="trSay">▶ Послушать</button>
-        </div>
-        <p class="tnote" id="trNote">Готовая фраза</p>
-      </div>
-    </div>
   </div>
 </section>
 
-<section class="band" id="turciya">
+<section id="turciya">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Türkiye</span>
@@ -579,7 +625,7 @@ h3{font-size:24px;line-height:1.25}
   </div>
 </section>
 
-<section id="kak-zapisatsya">
+<section class="band" id="kak-zapisatsya">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Как записаться</span>
@@ -594,7 +640,7 @@ h3{font-size:24px;line-height:1.25}
   </div>
 </section>
 
-<section class="band" id="voprosy">
+<section id="voprosy">
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Частые вопросы</span>
@@ -619,10 +665,10 @@ h3{font-size:24px;line-height:1.25}
       <h2>Начнём с <em>бесплатного урока?</em></h2>
       <p class="intro">Напишите мне в удобный мессенджер. Отвечу, предложу время и расскажу, как пройдёт первое занятие.</p>
       <div class="cta">
-        <a class="btn main" href="https://t.me/+79337342962" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#tg"/></svg>Написать в Telegram</a>
+        <a class="btn tgb" href="https://t.me/banunachka" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#tg"/></svg>Написать в Telegram</a>
         <a class="btn wa" href="https://wa.me/79337342962" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Написать в WhatsApp</a>
       </div>
-      <p class="phone">Номер для Telegram и WhatsApp: <b>+7 933 734-29-62</b><br>Пробный урок ни к чему не обязывает.</p>
+      <p class="phone">Telegram: <b>@banunachka</b><br>WhatsApp: <b>+7 933 734-29-62</b> (ник @bonuturkish)<br>Пробный урок ни к чему не обязывает.</p>
     </div>
     <figure class="stage" id="stage" aria-label="Турецкий оберег назар, его можно покрутить">
       <div class="fallback" aria-hidden="true"></div>
@@ -635,13 +681,13 @@ h3{font-size:24px;line-height:1.25}
 <footer class="foot">
   <div class="wrap">
     <span>© 2026 Бону · уроки турецкого онлайн</span>
-    <nav aria-label="Ссылки"><a href="https://www.instagram.com/bonu_turkish" target="_blank" rel="noopener">Instagram</a><a href="https://www.avito.ru/brands/i200226511" target="_blank" rel="noopener">Avito</a><a href="https://t.me/+79337342962" target="_blank" rel="noopener">Telegram</a></nav>
+    <nav aria-label="Ссылки"><a href="https://www.instagram.com/bonu_turkish" target="_blank" rel="noopener">Instagram</a><a href="https://www.avito.ru/brands/i200226511" target="_blank" rel="noopener">Avito</a><a href="https://t.me/banunachka" target="_blank" rel="noopener">Telegram</a></nav>
     <div class="credits">Фото Турции (Wikimedia Commons, кадрированы): <a href="https://commons.wikimedia.org/wiki/File:Hot_air_balloons_over_valleys_near_G%C3%B6reme,_Cappadocia_at_dawn_2.JPG" target="_blank" rel="noopener">MusikAnimal</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Istanbul_Galata_Tower_IMG_8211_1920.jpg" target="_blank" rel="noopener">Alexxx1979</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ru" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:View_of_S%C3%BCleymaniye_Mosque_from_The_Galata_Tower_(8394977709).jpg" target="_blank" rel="noopener">Jorge Láscar</a>, <a href="https://creativecommons.org/licenses/by/2.0/deed.ru" target="_blank" rel="noopener">CC BY 2.0</a>.</div>
   </div>
 </footer>
 
 <div class="dock">
-  <a class="btn main" href="https://t.me/+79337342962" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#tg"/></svg>Telegram</a>
+  <a class="btn tgb" href="https://t.me/banunachka" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#tg"/></svg>Telegram</a>
   <a class="btn wa" href="https://wa.me/79337342962" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
 </div>
 
@@ -677,7 +723,7 @@ const P=[["Merhaba!","Здравствуйте!","[МЕР-ха-ба]","Merhaba, 
 ["Hoş geldiniz","Добро пожаловать","[хош гель-ДИ-низ]","Ответ: Hoş bulduk! — Рады быть здесь!"],
 ["Kolay gelsin","Лёгкой работы","[ко-ЛАЙ ГЕЛЬ-син]","Так желают удачи тому, кто занят делом."],
 ["Görüşürüz!","До встречи!","[гё-рю-ШЮ-рюз]","Yarın görüşürüz! — Увидимся завтра!"]];
-const canSpeak='speechSynthesis' in window;let trVoice=null;
+const canSpeak=false;let trVoice=null;
 function pickVoice(){if(!canSpeak)return;try{trVoice=speechSynthesis.getVoices().find(x=>/^tr/i.test(x.lang))||null}catch(e){}}
 if(canSpeak){pickVoice();try{speechSynthesis.onvoiceschanged=pickVoice}catch(e){}}
 function speak(t){if(!canSpeak)return;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='tr-TR';u.rate=.85;if(trVoice)u.voice=trVoice;speechSynthesis.speak(u)}catch(e){}}
@@ -685,7 +731,7 @@ const cards=document.getElementById('cards');
 P.forEach(p=>{const b=document.createElement('button');b.type='button';b.className='fc';b.setAttribute('aria-label',p[0]+' — '+p[1]);
  b.innerHTML='<div class="fi"><div class="face front"><span class="hint">Türkçe</span><span class="w">'+p[0]+'</span><span class="hint">'+(canSpeak?'▶ нажмите — послушать':'нажмите — перевод')+'</span></div><div class="face back"><span class="r">'+p[1]+'</span><span class="sd">'+p[2]+'</span><span class="ex">'+p[3]+'</span></div></div>';
  b.addEventListener('click',()=>{const on=!b.classList.contains('on');b.classList.toggle('on');if(on)speak(p[0])});cards.appendChild(b)});
-if(!canSpeak)document.getElementById('voiceNote').textContent='Нажмите на карточку, чтобы увидеть перевод. На уроке вы услышите живое произношение.';
+
 
 // Мини-переводчик: сначала свой словарик (проверенные фразы), иначе — машинный перевод MyMemory
 const DICT={"привет":"Merhaba!","здравствуйте":"Merhaba!","доброе утро":"Günaydın!","добрый день":"İyi günler!","добрый вечер":"İyi akşamlar!","спокойной ночи":"İyi geceler!",
@@ -700,7 +746,7 @@ const DICT={"привет":"Merhaba!","здравствуйте":"Merhaba!","д�
 "удачи":"Bol şans!","с днем рождения":"İyi ki doğdun!","мама":"Anne","папа":"Baba","семья":"Aile","хлеб":"Ekmek","отель":"Otel","аэропорт":"Havalimanı","такси":"Taksi",
 "сегодня":"Bugün","завтра":"Yarın","вчера":"Dün","один":"Bir","два":"İki","три":"Üç","четыре":"Dört","пять":"Beş","я из россии":"Rusya'dan geliyorum","мне нравится турция":"Türkiye'yi seviyorum"};
 const CH=['Привет','Спасибо','Сколько стоит?','Я тебя люблю','Где метро?','Приятного аппетита','Я не понимаю'];
-const ruIn=document.getElementById('ruIn'),trOut=document.getElementById('trOut'),trSrc=document.getElementById('trSrc'),trNote=document.getElementById('trNote'),trSay=document.getElementById('trSay');
+const ruIn=document.getElementById('ruIn'),trOut=document.getElementById('trOut'),trSrc=document.getElementById('trSrc'),trNote=document.getElementById('trNote'),trSay=null;
 const chips=document.getElementById('chips');CH.forEach(c=>{const b=document.createElement('button');b.type='button';b.textContent=c;b.onclick=()=>{ruIn.value=c;run(true)};chips.appendChild(b)});
 const norm=s=>s.toLowerCase().replace(/ё/g,'е').replace(/[.,!?;:«»"()…]+/g,' ').replace(/\s+/g,' ').trim();
 let tm=0,seq=0;
@@ -718,8 +764,7 @@ async function run(sayIt){const raw=ruIn.value.trim();const my=++seq;if(!raw){sh
  catch(e){if(my!==seq)return;show('…',raw,'Этой фразы нет среди готовых, а внешний переводчик сейчас недоступен. Попробуйте подсказки ниже или спросите Бону на пробном уроке!')}}
 ruIn.addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(()=>run(false),650)});
 ruIn.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();clearTimeout(tm);run(true)}});
-trSay.addEventListener('click',()=>speak(trOut.textContent));
-if(!canSpeak)trSay.hidden=true;
+
 
 // Наклон карточек за мышкой
 if(matchMedia('(pointer: fine)').matches&&!RM){document.querySelectorAll('.goal,.mile,.creds li').forEach(c=>{c.style.transition='transform .25s';
@@ -740,6 +785,10 @@ if(matchMedia('(pointer: fine)').matches&&!RM){document.querySelectorAll('.goal,
    if(p.y>h+20||p.x<-30||p.x>w+30)Object.assign(p,mk(-20));
    g.save();g.translate(p.x,p.y);g.rotate(p.a);g.scale(1,.55+.45*Math.abs(Math.sin(t*1.3+p.ph)));g.globalAlpha=.75;g.fillStyle=p.c;
    g.beginPath();g.moveTo(0,-p.s);g.bezierCurveTo(p.s*.9,-p.s*.6,p.s*.7,p.s*.7,0,p.s);g.bezierCurveTo(-p.s*.7,p.s*.7,-p.s*.9,-p.s*.6,0,-p.s);g.fill();g.restore()})})()})();
+
+// Нижняя панель: только после первого экрана
+const dock=document.querySelector('.dock'),hc=document.querySelector('.hero .cta');
+if(dock&&hc)new IntersectionObserver(e=>{dock.classList.toggle('show',!e[0].isIntersecting&&e[0].boundingClientRect.top<0)}).observe(hc);
 
 // Ещё отзывы
 const more=document.getElementById('moreBtn');
