@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Бону — варианты</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Comfortaa:wght@500;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Lora:ital,wght@0,600;1,600&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* 4 нежных варианта первого экрана сайта репетитора турецкого. Выбор стиля — только первый экран. */
+:root{--ink:#3a2a30}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:#fff;color:var(--ink);font-size:18px;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.pick{position:fixed;z-index:50;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:6px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);padding:6px;border-radius:999px;box-shadow:0 10px 30px -10px rgba(60,30,50,.35)}
+.pick a{font:700 15px Manrope,sans-serif;padding:10px 16px;border-radius:999px;color:#5b4450}
+.pick a:hover{background:#f6ecef}
+.v{position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column}
+.tag{position:absolute;z-index:5;top:86px;right:20px;font:700 13px Manrope,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.75);color:#6b5260}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px clamp(16px,4vw,56px);position:relative;z-index:3}
+.logo{font-weight:800;font-size:22px;display:flex;align-items:center;gap:10px}
+.logo small{font-weight:500;font-size:15px;opacity:.7}
+.menu{display:flex;gap:26px;font-size:16px;opacity:.85}
+.hero{flex:1;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:10px clamp(16px,4vw,56px) 90px;position:relative;z-index:2;max-width:1280px;width:100%;margin:0 auto}
+h1{font-weight:700;line-height:1.08;margin-bottom:20px;font-size:clamp(36px,5vw,64px);text-wrap:balance}
+.lead{font-size:clamp(18px,1.6vw,21px);max-width:560px;margin-bottom:26px;opacity:.88}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.facts span{font-size:15px;font-weight:700;padding:8px 14px;border-radius:999px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:17px 26px;border-radius:16px;font:800 17px Manrope,sans-serif;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.ph{position:relative;display:grid;place-items:center;color:#fff;font:700 15px Manrope,sans-serif;text-align:center}
+.ph b{display:block;font:600 64px 'Playfair Display',serif;line-height:1}
+.ph i{font-style:normal;opacity:.85;font-size:13px;display:block;margin-top:6px}
+.say{display:inline-flex;flex-direction:column;padding:14px 18px;border-radius:18px;background:#fff;box-shadow:0 20px 40px -18px rgba(60,30,50,.4);min-width:210px}
+.say .tr{font:700 26px 'Playfair Display',serif;transition:opacity .35s}
+.say .ru{font-size:15px;opacity:.7;transition:opacity .35s}
+.say small{font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.55;font-weight:700}
+.fade{opacity:0}
+
+/* ===== 1. Тюльпан: пудровая роза ===== */
+.v1{background:radial-gradient(circle at 85% 15%,#ffe4ea,transparent 45%),radial-gradient(circle at 5% 95%,#fde9df,transparent 50%),#fdf5f3;color:#3d2a2e}
+.v1 h1{font-family:'Playfair Display',serif}
+.v1 h1 em{color:#c9637b}
+.v1 .facts span{background:#fff;color:#a64d63;box-shadow:0 6px 18px -10px rgba(166,77,99,.5)}
+.v1 .main{background:#c9637b;color:#fff;box-shadow:0 14px 34px -12px rgba(201,99,123,.8)}
+.v1 .ghost{background:#fff;color:#a64d63;border:1px solid #f0d3da}
+.v1 .art{position:relative;justify-self:center;width:min(430px,86vw)}
+.v1 .arch{aspect-ratio:4/5;border-radius:220px 220px 28px 28px;background:linear-gradient(160deg,#f4b6c4,#e48da2 55%,#c9637b);box-shadow:0 30px 60px -25px rgba(201,99,123,.7);border:10px solid #fff}
+.v1 .say{position:absolute;left:-30px;bottom:40px}
+.v1 .say .tr{color:#c9637b}
+.v1 .stars{position:absolute;right:-18px;top:40px;background:#fff;border-radius:18px;padding:12px 16px;font-weight:800;box-shadow:0 20px 40px -18px rgba(60,30,50,.4);font-size:15px}
+.v1 .stars b{color:#e7a33c;letter-spacing:2px}
+.tulip{position:absolute;opacity:.55;pointer-events:none}
+.v1 .t1{left:2%;top:18%;width:90px;animation:sway 6s ease-in-out infinite}
+.v1 .t2{right:3%;bottom:6%;width:120px;animation:sway 7s ease-in-out infinite reverse}
+@keyframes sway{50%{transform:rotate(6deg) translateY(-6px)}}
+
+/* ===== 2. Лаванда: первый диалог ===== */
+.v2{background:linear-gradient(135deg,#f4effd 0%,#eef3fd 55%,#fbf0f7 100%);color:#2f2a45}
+.v2 h1{font-family:Comfortaa,sans-serif;font-weight:700;letter-spacing:-.01em}
+.v2 h1 em{font-style:normal;background:linear-gradient(90deg,#8b6fd6,#d17fb6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.v2 .facts span{background:rgba(139,111,214,.12);color:#6a50bf}
+.v2 .main{background:linear-gradient(90deg,#8b6fd6,#b37ad0);color:#fff;box-shadow:0 14px 34px -12px rgba(139,111,214,.8)}
+.v2 .ghost{background:#fff;color:#6a50bf;border:1px solid #e1d8f6}
+.v2 .chat{justify-self:center;width:min(420px,92vw);background:rgba(255,255,255,.75);backdrop-filter:blur(12px);border:1px solid #fff;border-radius:30px;padding:20px;box-shadow:0 30px 70px -30px rgba(80,60,150,.5)}
+.v2 .chat h4{font:700 15px Manrope,sans-serif;color:#8b6fd6;text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px}
+.v2 .chat p.s{font-size:15px;opacity:.7;margin-bottom:14px}
+.v2 .ln{display:flex;flex-direction:column;gap:10px;min-height:290px}
+.v2 .bub{max-width:82%;padding:10px 14px;border-radius:18px;font-size:17px;opacity:0;transform:translateY(8px);transition:.45s;cursor:default}
+.v2 .bub.in{opacity:1;transform:none}
+.v2 .bub small{display:block;font-size:13px;opacity:.65;margin-top:2px}
+.v2 .a{background:#fff;align-self:flex-start;border-bottom-left-radius:6px}
+.v2 .b{background:linear-gradient(90deg,#8b6fd6,#b37ad0);color:#fff;align-self:flex-end;border-bottom-right-radius:6px}
+.v2 .again{margin-top:12px;font:700 15px Manrope,sans-serif;color:#6a50bf;background:none;border:0;cursor:pointer}
+.blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.55;pointer-events:none}
+.v2 .b1{width:340px;height:340px;background:#d9c9ff;left:-80px;top:-60px;animation:float 9s ease-in-out infinite}
+.v2 .b2{width:300px;height:300px;background:#ffd3ea;right:-60px;bottom:-40px;animation:float 11s ease-in-out infinite reverse}
+@keyframes float{50%{transform:translate(30px,20px)}}
+
+/* ===== 3. Изник: изразцы ===== */
+.v3{background:#fbf7f0;color:#21363b}
+.v3 h1{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,5.6vw,74px);font-weight:700}
+.v3 h1 em{color:#2f8a86}
+.v3 .facts span{background:#fff;color:#2f6f8f;border:1px solid #dbe9ea}
+.v3 .main{background:#2f8a86;color:#fff;box-shadow:0 14px 34px -12px rgba(47,138,134,.75)}
+.v3 .ghost{background:#fff;color:#2f6f8f;border:1px solid #dbe9ea}
+.v3 .tiles{justify-self:center;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:min(440px,90vw)}
+.v3 .tile{aspect-ratio:1;border-radius:18px;perspective:600px;cursor:pointer}
+.v3 .tile>div{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.v3 .tile.on>div,.v3 .tile:hover>div{transform:rotateY(180deg)}
+.v3 .fr,.v3 .bk{position:absolute;inset:0;border-radius:18px;backface-visibility:hidden;display:grid;place-items:center;text-align:center;padding:6px}
+.v3 .fr{background:radial-gradient(circle,#fff 18%,transparent 19%),radial-gradient(circle at 50% 50%,transparent 34%,#7fbcd2 35% 38%,transparent 39%),conic-gradient(from 45deg,#cfe7ee 0 25%,#e8f3f1 0 50%,#cfe7ee 0 75%,#e8f3f1 0);border:2px solid #fff;box-shadow:0 10px 24px -14px rgba(33,54,59,.5)}
+.v3 .tile:nth-child(even) .fr{background:radial-gradient(circle,#2f8a86 10%,transparent 11%),radial-gradient(circle,transparent 30%,#f2c6b4 31% 35%,transparent 36%),conic-gradient(#e8f3f1 0 25%,#d6ecea 0 50%,#e8f3f1 0 75%,#d6ecea 0)}
+.v3 .bk{transform:rotateY(180deg);background:#2f8a86;color:#fff}
+.v3 .bk b{display:block;font:700 19px 'Cormorant Garamond',serif;font-size:21px}
+.v3 .bk span{font-size:13px;opacity:.85}
+.v3 .tile.center .fr{background:#fff;border:2px solid #d6ecea}
+.v3 .tile.center .fr b{font:700 34px 'Cormorant Garamond',serif;color:#2f8a86}
+.v3 .hint{grid-column:1/-1;text-align:center;font-size:14px;opacity:.6;margin-top:4px}
+.v3 .border{position:absolute;left:0;right:0;height:16px;background:repeating-linear-gradient(90deg,#2f8a86 0 14px,#fbf7f0 14px 18px,#f2c6b4 18px 32px,#fbf7f0 32px 36px);opacity:.5}
+.v3 .border.top{top:0}.v3 .border.bot{bottom:0}
+
+/* ===== 4. Босфор на закате ===== */
+.v4{background:linear-gradient(180deg,#ffe9dc 0%,#fbd3d6 45%,#ead5ef 100%);color:#43283f}
+.v4 h1{font-family:Lora,serif}
+.v4 h1 em{color:#c2557a}
+.v4 .facts span{background:rgba(255,255,255,.7);color:#8a3e63}
+.v4 .main{background:#c2557a;color:#fff;box-shadow:0 14px 34px -12px rgba(194,85,122,.8)}
+.v4 .ghost{background:rgba(255,255,255,.7);color:#8a3e63}
+.v4 .sun{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,#fff6e8,#ffd6b8 60%,transparent 70%);right:12%;top:18%;opacity:.9;animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.06)}}
+.v4 .city{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;z-index:1;pointer-events:none}
+.v4 .gull{position:absolute;z-index:1;font-size:22px;color:#8a5a7a;opacity:.6;animation:fly 18s linear infinite}
+@keyframes fly{from{transform:translateX(-10vw)}to{transform:translateX(110vw)}}
+.v4 .card{justify-self:center;width:min(380px,88vw);background:rgba(255,255,255,.65);backdrop-filter:blur(12px);border-radius:28px;padding:22px;box-shadow:0 30px 60px -30px rgba(120,50,90,.6);display:flex;gap:16px;align-items:center;margin-bottom:60px}
+.v4 .ava{width:96px;height:96px;flex:none;border-radius:50%;background:linear-gradient(135deg,#f6a9b9,#c2557a);border:4px solid #fff}
+.v4 .ava b{font-size:40px}
+.v4 .card h5{font:600 22px Lora,serif}
+.v4 .card p{font-size:15px;opacity:.8;line-height:1.4}
+.v4 .card .st{color:#e09b3d;font-weight:800;font-size:15px}
+.v4 .say{margin-top:18px;background:rgba(255,255,255,.75)}
+.v4 .say .tr{color:#c2557a;font-family:Lora,serif}
+
+@media (max-width:900px){
+ .hero{grid-template-columns:1fr;gap:34px;padding-bottom:110px;text-align:left}
+ .menu{display:none}
+ .v1 .say{left:0}.v1 .stars{right:0}
+ .tag{top:74px}
+}
+@media (max-width:560px){
+ .nav .btn{display:none}
+ .cta .btn{width:100%}
+ .v1 .art{width:78vw}
+ .v4 .sun{width:200px;height:200px;right:-30px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav class="pick" aria-label="Варианты"><a href="#v1">1</a><a href="#v2">2</a><a href="#v3">3</a><a href="#v4">4</a></nav>
+
+<!-- ===== Вариант 1 ===== -->
+<section class="v v1" id="v1">
+  <span class="tag">Вариант 1 · Тюльпан</span>
+  <svg class="tulip t1" viewBox="0 0 60 120" aria-hidden="true"><path d="M30 118V55" stroke="#9cbf9a" stroke-width="3" fill="none"/><path d="M30 80c-14-4-20-14-20-24 10 2 18 10 20 24zM30 90c12-6 20-14 20-24-10 4-18 12-20 24z" fill="#b9d6b1"/><path d="M30 58C14 52 12 30 18 12l12 14 12-14c6 18 4 40-12 46z" fill="#e58aa0"/><path d="M30 58c-6-10-6-24 0-32 6 8 6 22 0 32z" fill="#d06a84"/></svg>
+  <svg class="tulip t2" viewBox="0 0 60 120" aria-hidden="true"><path d="M30 118V55" stroke="#9cbf9a" stroke-width="3" fill="none"/><path d="M30 80c-14-4-20-14-20-24 10 2 18 10 20 24z" fill="#b9d6b1"/><path d="M30 58C14 52 12 30 18 12l12 14 12-14c6 18 4 40-12 46z" fill="#f2a9ba"/></svg>
+  <header class="nav"><a class="logo" href="#v1">🌷 Бону <small>турецкий онлайн</small></a><div class="menu"><a href="#v1">Как проходит урок</a><a href="#v1">Отзывы</a><a href="#v1">Цена</a></div><a class="btn ghost" href="https://t.me/+79337342962" target="_blank" rel="noopener">Написать</a></header>
+  <div class="hero">
+    <div>
+      <h1>Заговорите по-турецки <em>с первых уроков</em></h1>
+      <p class="lead">Индивидуальные онлайн-уроки: половина — грамматика простыми словами, половина — живой разговор. Объясню столько раз, сколько нужно.</p>
+      <div class="facts"><span>★ 5,0 · 51 отзыв на Avito</span><span>7 лет преподаю</span><span>150+ учеников</span></div>
+      <div class="cta"><a class="btn main" href="https://t.me/+79337342962" target="_blank" rel="noopener">Первый урок бесплатно →</a><a class="btn ghost" href="#v1">1 500 ₽ за час</a></div>
+    </div>
+    <div class="art">
+      <div class="arch ph"><div><b>Б</b>здесь фото Бону<i>портрет из её фото</i></div></div>
+      <div class="stars"><b>★★★★★</b><br>«На третьем уроке<br>уже начала говорить»</div>
+      <div class="say" data-say><small>Скажи по-турецки</small><span class="tr">Merhaba!</span><span class="ru">Здравствуйте!</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Вариант 2 ===== -->
+<section class="v v2" id="v2">
+  <span class="tag">Вариант 2 · Лаванда</span>
+  <i class="blob b1"></i><i class="blob b2"></i>
+  <header class="nav"><a class="logo" href="#v2">Bonu<span style="color:#8b6fd6">·</span>Türkçe</a><div class="menu"><a href="#v2">Уроки</a><a href="#v2">Отзывы</a><a href="#v2">Цена</a></div><a class="btn ghost" href="https://t.me/+79337342962" target="_blank" rel="noopener">Записаться</a></header>
+  <div class="hero">
+    <div>
+      <h1>Ваш первый диалог на турецком — <em>уже на первом уроке</em></h1>
+      <p class="lead">Учу спокойно и без давления: грамматика «по полочкам» и сразу практика. Для переезда, работы, учёбы или просто для души.</p>
+      <div class="facts"><span>Окончила турецкий лицей</span><span>Жила и работала в Турции</span><span>★ 5,0 · 51 отзыв</span></div>
+      <div class="cta"><a class="btn main" href="https://t.me/+79337342962" target="_blank" rel="noopener">Бесплатный пробный урок</a><a class="btn ghost" href="#v2">Отзывы учеников</a></div>
+    </div>
+    <div class="chat">
+      <h4>Урок 1 · знакомство</h4>
+      <p class="s">Вот так звучит ваш первый диалог 👇</p>
+      <div class="ln" id="ln"></div>
+      <button class="again" type="button" id="again">↻ Ещё раз</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Вариант 3 ===== -->
+<section class="v v3" id="v3">
+  <i class="border top"></i>
+  <span class="tag">Вариант 3 · Изник</span>
+  <header class="nav"><a class="logo" href="#v3" style="font-family:'Cormorant Garamond',serif;font-size:28px">Бону <small style="font-family:Manrope">· турецкий язык</small></a><div class="menu"><a href="#v3">Как учимся</a><a href="#v3">Отзывы</a><a href="#v3">Цена</a></div><a class="btn ghost" href="https://t.me/+79337342962" target="_blank" rel="noopener">Написать</a></header>
+  <div class="hero">
+    <div>
+      <h1>Турецкий, который <em>вы начнёте говорить</em></h1>
+      <p class="lead">Один на один, онлайн, в удобное время. Каждый урок: повторяем, учим новое правило, говорим. Без воды и скучной зубрёжки.</p>
+      <div class="facts"><span>1 500 ₽ за час</span><span>Пробный урок — бесплатно</span><span>★ 5,0 · 51 отзыв</span></div>
+      <div class="cta"><a class="btn main" href="https://t.me/+79337342962" target="_blank" rel="noopener">Записаться на пробный урок</a><a class="btn ghost" href="https://wa.me/79337342962" target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <div class="tiles" id="tiles"></div>
+  </div>
+  <i class="border bot"></i>
+</section>
+
+<!-- ===== Вариант 4 ===== -->
+<section class="v v4" id="v4">
+  <span class="tag">Вариант 4 · Босфор</span>
+  <i class="sun"></i>
+  <span class="gull" style="top:22%">〰</span><span class="gull" style="top:30%;animation-delay:-7s;font-size:16px">〰</span>
+  <svg class="city" viewBox="0 0 1440 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path fill="#d8b4d6" opacity=".55" d="M0 220V150h60v-20h30v20h50v-30h20v-60l6-20 6 20v60h20v30h80c0-40 30-70 70-70s70 30 70 70h40v-50l5-60 5 60v50h40v-30h60v-25c0-25 20-45 45-45s45 20 45 45v25h60v-40l5-50 5 50v40h70v-20h80v-30c0-30 25-55 55-55s55 25 55 55v30h50l4-70 4 70h60v-20h90v40h60v-30h60v60H0z"/>
+    <path fill="#c79ac6" opacity=".75" d="M0 220v-40h120v-15h50v15h90c0-22 18-40 40-40s40 18 40 40h120v-25h70v25h140c0-30 24-54 54-54s54 24 54 54h110l3-50 3 50h110v-20h90v20h120c0-18 15-33 33-33s33 15 33 33h120v40z"/>
+    <path fill="#a77aa8" opacity=".55" d="M0 220c120-14 240-14 360 0s240 14 360 0 240-14 360 0 240 14 360 0v0z"/>
+  </svg>
+  <header class="nav"><a class="logo" href="#v4" style="font-family:Lora,serif">Бону <small style="font-family:Manrope">· Türkçe</small></a><div class="menu"><a href="#v4">Уроки</a><a href="#v4">Отзывы</a><a href="#v4">Цена</a></div><a class="btn ghost" href="https://t.me/+79337342962" target="_blank" rel="noopener">Написать</a></header>
+  <div class="hero">
+    <div>
+      <h1>Турецкий язык — <em>легко, понятно и с удовольствием</em></h1>
+      <p class="lead">Онлайн-уроки один на один с преподавателем, которая жила и работала в Турции. Говорим с первого занятия.</p>
+      <div class="facts"><span>7 лет опыта</span><span>150+ учеников</span><span>1 500 ₽ / час</span></div>
+      <div class="cta"><a class="btn main" href="https://t.me/+79337342962" target="_blank" rel="noopener">Первый урок — бесплатно</a><a class="btn ghost" href="https://wa.me/79337342962" target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <div>
+      <div class="card"><div class="ava ph"><b>Б</b></div><div><h5>Бону</h5><p>преподаватель турецкого</p><div class="st">★★★★★ 5,0 · 51 отзыв</div></div></div>
+      <div class="say" data-say><small>Слово дня</small><span class="tr">Merhaba!</span><span class="ru">Здравствуйте!</span></div>
+    </div>
+  </div>
+</section>
+
+<script>
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// «Скажи по-турецки»: слова сменяются
+const W=[['Merhaba!','Здравствуйте!'],['Nasılsın?','Как дела?'],['Teşekkür ederim','Спасибо'],['Çok güzel!','Очень красиво!'],['Görüşürüz!','Увидимся!']];
+document.querySelectorAll('[data-say]').forEach((el,k)=>{let i=0;const tr=el.querySelector('.tr'),ru=el.querySelector('.ru');
+ setInterval(()=>{tr.classList.add('fade');ru.classList.add('fade');setTimeout(()=>{i=(i+1)%W.length;tr.textContent=W[i][0];ru.textContent=W[i][1];tr.classList.remove('fade');ru.classList.remove('fade')},350)},2600+k*400)});
+// Вариант 2: первый диалог появляется по одной реплике
+const D=[['a','Merhaba! Benim adım Bonu.','Здравствуйте! Меня зовут Бону.'],['b','Merhaba! Benim adım Anna.','Здравствуйте! Меня зовут Анна.'],['a','Memnun oldum! Nasılsın?','Очень приятно! Как дела?'],['b','İyiyim, teşekkür ederim!','Хорошо, спасибо!'],['a','Harika! Hadi başlayalım 🌷','Отлично! Давайте начнём']];
+const ln=document.getElementById('ln');let run=0;
+function play(){const my=++run;ln.innerHTML='';D.forEach((d,i)=>{const b=document.createElement('div');b.className='bub '+d[0];b.innerHTML=d[1]+'<small>'+d[2]+'</small>';ln.appendChild(b);setTimeout(()=>{if(my===run)b.classList.add('in')},RM?0:500+i*1100)})}
+document.getElementById('again').onclick=play;
+new IntersectionObserver(e=>{if(e[0].isIntersecting)play()},{threshold:.4}).observe(document.getElementById('v2'));
+play();
+// Вариант 3: изразцы переворачиваются и показывают слова
+const T=[['Merhaba','здравствуйте'],['Evet','да'],['Hayır','нет'],['Lütfen','пожалуйста'],null,['Su','вода'],['Çay','чай'],['Aşk','любовь'],['Deniz','море']];
+const tiles=document.getElementById('tiles');
+T.forEach((t,i)=>{const d=document.createElement('div');d.className='tile'+(t?'':' center');d.innerHTML=t?`<div><div class="fr"></div><div class="bk"><div><b>${t[0]}</b><span>${t[1]}</span></div></div></div>`:`<div><div class="fr"><b>TR</b></div></div>`;if(t)d.onclick=()=>d.classList.toggle('on');tiles.appendChild(d)});
+const h=document.createElement('div');h.className='hint';h.textContent='Нажмите на плитку — узнаете слово';tiles.appendChild(h);
+if(!RM){let k=0;const idx=[0,2,6,8,1,3,5,7];setInterval(()=>{const t=tiles.children[idx[k%idx.length]];t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1800);k++},1400)}
+</script>
+</body>
+</html>
